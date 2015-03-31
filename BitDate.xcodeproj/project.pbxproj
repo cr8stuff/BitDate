@@ -13,6 +13,7 @@
 		7D98583B1ACB565100A0D2FE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D98583A1ACB565100A0D2FE /* Images.xcassets */; };
 		7D98583E1ACB565100A0D2FE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D98583C1ACB565100A0D2FE /* LaunchScreen.xib */; };
 		7D98584A1ACB565200A0D2FE /* BitDateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9858491ACB565200A0D2FE /* BitDateTests.swift */; };
+		7D9858551ACB598800A0D2FE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9858541ACB598800A0D2FE /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		7D9858431ACB565200A0D2FE /* BitDateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitDateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D9858481ACB565200A0D2FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D9858491ACB565200A0D2FE /* BitDateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitDateTests.swift; sourceTree = "<group>"; };
+		7D9858541ACB598800A0D2FE /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				7D9858371ACB565100A0D2FE /* Main.storyboard */,
 				7D98583A1ACB565100A0D2FE /* Images.xcassets */,
 				7D98583C1ACB565100A0D2FE /* LaunchScreen.xib */,
+				7D9858531ACB595900A0D2FE /* Views */,
 				7D9858311ACB565100A0D2FE /* Supporting Files */,
 			);
 			path = BitDate;
@@ -110,6 +113,15 @@
 				7D9858481ACB565200A0D2FE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D9858531ACB595900A0D2FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7D9858541ACB598800A0D2FE /* CardView.swift */,
+			);
+			name = Views;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D9858361ACB565100A0D2FE /* ViewController.swift in Sources */,
+				7D9858551ACB598800A0D2FE /* CardView.swift in Sources */,
 				7D9858341ACB565100A0D2FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
