@@ -16,7 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-            Parse.setApplicationId("exSSXsvuWFGfbEQf7aUkBkwC1OXJGUMRGIX4p98p", clientKey: "JeZflmcR9viDwoZkDXHbfg6UjScAsP7iX4iCXk2j")
+        Parse.setApplicationId("exSSXsvuWFGfbEQf7aUkBkwC1OXJGUMRGIX4p98p", clientKey: "JeZflmcR9viDwoZkDXHbfg6UjScAsP7iX4iCXk2j")
+        PFFacebookUtils.initializeFacebook()
+        
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        var initialViewController: UIViewController
+        
+        
+        if currentUser() != nil {
+            initialViewController = storyboard.instantiateViewControllerWithIdentifier("ProfileNavController") as UIViewController
+        }
+        else {
+            initialViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController
+        }
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
         
         
         // Override point for customization after application launch.
