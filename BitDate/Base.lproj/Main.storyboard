@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BitDate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageController" id="BYZ-38-t0r" customClass="ViewController" customModule="BitDate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -59,7 +59,7 @@
         <!--Profile View Controller-->
         <scene sceneID="wPj-QN-AGP">
             <objects>
-                <viewController storyboardIdentifier="ProfileNavController" id="yBV-aO-c1D" customClass="ProfileViewController" customModule="BitDate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yBV-aO-c1D" customClass="ProfileViewController" customModule="BitDate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AUl-1e-nrt"/>
                         <viewControllerLayoutGuide type="bottom" id="LTU-Ur-uHg"/>
@@ -80,11 +80,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WVS-vN-sxS" firstAttribute="top" secondItem="AUl-1e-nrt" secondAttribute="bottom" id="8fx-2i-f5F"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8bQ-Bw-eyk" secondAttribute="trailing" constant="31" id="CaC-fd-Z61"/>
-                            <constraint firstItem="WVS-vN-sxS" firstAttribute="top" secondItem="AUl-1e-nrt" secondAttribute="bottom" id="LYT-CS-db4"/>
                             <constraint firstItem="LTU-Ur-uHg" firstAttribute="top" secondItem="8bQ-Bw-eyk" secondAttribute="bottom" constant="14" id="Qk6-L6-4f6"/>
-                            <constraint firstItem="WVS-vN-sxS" firstAttribute="top" secondItem="AUl-1e-nrt" secondAttribute="bottom" id="RXa-hS-SlZ"/>
                             <constraint firstItem="WVS-vN-sxS" firstAttribute="leading" secondItem="3jv-tg-x1g" secondAttribute="leadingMargin" constant="-16" id="Reo-Nr-EYz"/>
                             <constraint firstItem="WVS-vN-sxS" firstAttribute="top" secondItem="AUl-1e-nrt" secondAttribute="bottom" id="SOn-cq-fdL"/>
                             <constraint firstItem="8bQ-Bw-eyk" firstAttribute="leading" secondItem="3jv-tg-x1g" secondAttribute="leadingMargin" constant="10" id="fIV-79-Kof"/>
@@ -100,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQd-33-mpu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1530" y="1811"/>
+            <point key="canvasLocation" x="1369" y="1788"/>
         </scene>
         <!--Cards View Controller-->
         <scene sceneID="SMF-pM-kko">
@@ -136,11 +133,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWu-VK-icM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1530" y="1117"/>
+            <point key="canvasLocation" x="1369" y="1117"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tSG-9c-phA">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NwS-p4-S7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="CardsNavController" automaticallyAdjustsScrollViewInsets="NO" id="Vif-cA-gg9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hph-JX-5UT">
@@ -152,27 +150,26 @@
                         <segue destination="oyJ-7k-OJw" kind="relationship" relationship="rootViewController" id="BOb-oV-mSE"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NwS-p4-S7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="718" y="1117"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="0F5-d2-2qR">
+        <scene sceneID="h49-4s-CvW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zUy-jh-LJj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ProfileNavController" automaticallyAdjustsScrollViewInsets="NO" id="zan-uu-eXl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nQW-wM-DFi">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kie-5h-U1c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="yBV-aO-c1D" kind="relationship" relationship="rootViewController" id="uSb-la-gXw"/>
+                        <segue destination="yBV-aO-c1D" kind="relationship" relationship="rootViewController" id="N3v-Hh-tiJ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mkU-7z-7gG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nlP-Ju-zJS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="718" y="1811"/>
+            <point key="canvasLocation" x="718" y="1788"/>
         </scene>
     </scenes>
 </document>

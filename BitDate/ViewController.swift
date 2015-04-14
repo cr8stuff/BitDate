@@ -8,24 +8,63 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIPageViewController, UIPageViewControllerDataSource {
 
+    let cardsVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CardsNavController") as UIViewController
+    let profileVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ProfileNavController") as UIViewController
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let label = UILabel(frame: CGRectMake(50.0, 50.0, 200.0, 250.0))
-        label.text = "oh ya!"
-        
-        self.view.addSubview(label)
-        self.view.addSubview(CardView(frame: CGRectMake(80.0, 80.0, 120.0, 200.0)))
+        view.backgroundColor = UIColor.whiteColor()
+        self.dataSource = self
+        setViewControllers([cardsVC], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func goToNextVC ()
+    {
+        let nextVC = pageViewController(self, viewControllerAfterViewController: viewControllers[0] as UIViewController)!
+        setViewControllers([nextVC], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
+        
+    }
 
+    func goToPreviousVC ()
+    {
+        let previousVC = pageViewController(self, viewControllerBeforeViewController: viewControllers[0] as UIViewController)!
+        setViewControllers([previousVC], direction: UIPageViewControllerNavigationDirection.Reverse, animated: true, completion: nil)
+        
+    }
+    
+    //MARK:  UIPageViewControllerDataSource
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        
+        switch viewController {
+        case cardsVC:
+            return profileVC
+        case profileVC:
+            return nil
+        default:
+            return nil
+        }
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        
+        switch viewController {
+        case cardsVC:
+            return nil
+        case profileVC:
+            return cardsVC
+        default:
+            return nil
+        }
+    }
 
 }
 
