@@ -17,7 +17,7 @@ class ProfileViewController: UIViewController {
         super.viewWillAppear(animated)
         
         navigationItem.titleView = UIImageView(image: UIImage(named: "profile-header"))
-        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav-back-button"), style: UIBarButtonItemStyle.Plain, target: self, action: "goToCards")
+        let rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav-back-button"), style: UIBarButtonItemStyle.Plain, target: self, action: "goToCards:")
         navigationItem.setRightBarButtonItem(rightBarButtonItem, animated: true)
         
     }
@@ -41,6 +41,6 @@ class ProfileViewController: UIViewController {
     }
     
     func goToCards(button: UIBarButtonItem){
-        
+        pageController.goToNextVC()        
     }
 }
