@@ -104,41 +104,51 @@
             <objects>
                 <viewController id="oyJ-7k-OJw" customClass="CardsViewController" customModule="BitDate" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="UFb-Nm-vTP"/>
-                        <viewControllerLayoutGuide type="bottom" id="xbk-Fd-1Sh"/>
+                        <viewControllerLayoutGuide type="top" id="kmm-Fu-Z4e"/>
+                        <viewControllerLayoutGuide type="bottom" id="B2h-pJ-s8M"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="iEn-AM-b7y">
+                    <view key="view" contentMode="scaleToFill" id="BiA-qP-1c4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sPK-P3-bJJ">
-                                <rect key="frame" x="170" y="72" width="260" height="320"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKE-sp-ZMh">
+                                <rect key="frame" x="66" y="81" width="250" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="260" id="dME-ae-y8b"/>
-                                    <constraint firstAttribute="height" constant="320" id="tmU-OT-iB3"/>
+                                    <constraint firstAttribute="width" constant="250" id="QNg-mv-5Ku"/>
+                                    <constraint firstAttribute="height" constant="250" id="uxc-RT-gbt"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="sPK-P3-bJJ" secondAttribute="centerX" id="eQv-QJ-zNR"/>
-                            <constraint firstItem="sPK-P3-bJJ" firstAttribute="top" secondItem="UFb-Nm-vTP" secondAttribute="bottom" constant="10" id="z8z-Gb-mcg"/>
+                            <constraint firstItem="oKE-sp-ZMh" firstAttribute="leading" secondItem="BiA-qP-1c4" secondAttribute="leadingMargin" constant="50" id="7k6-km-itb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oKE-sp-ZMh" secondAttribute="trailing" constant="176" id="AZ2-Vr-jkK"/>
+                            <constraint firstItem="oKE-sp-ZMh" firstAttribute="leading" secondItem="BiA-qP-1c4" secondAttribute="leadingMargin" constant="142" id="K4s-D3-Tso"/>
+                            <constraint firstItem="oKE-sp-ZMh" firstAttribute="top" secondItem="kmm-Fu-Z4e" secondAttribute="bottom" constant="17" id="SLG-cf-NjP"/>
+                            <constraint firstItem="B2h-pJ-s8M" firstAttribute="top" secondItem="oKE-sp-ZMh" secondAttribute="bottom" constant="269" id="gDD-66-b2h"/>
+                            <constraint firstItem="oKE-sp-ZMh" firstAttribute="leading" secondItem="BiA-qP-1c4" secondAttribute="leadingMargin" constant="142" id="qaO-Uo-iX2"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AZ2-Vr-jkK"/>
+                                <exclude reference="K4s-D3-Tso"/>
+                                <exclude reference="qaO-Uo-iX2"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="gKG-g8-0wW"/>
                     <connections>
-                        <outlet property="cardStackView" destination="sPK-P3-bJJ" id="VgF-ha-Q0y"/>
+                        <outlet property="cardStackView" destination="oKE-sp-ZMh" id="ihl-yc-QjO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWu-VK-icM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1369" y="1117"/>
+            <point key="canvasLocation" x="1419" y="1109"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tSG-9c-phA">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NwS-p4-S7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="CardsNavController" automaticallyAdjustsScrollViewInsets="NO" id="Vif-cA-gg9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hph-JX-5UT">
@@ -150,6 +160,7 @@
                         <segue destination="oyJ-7k-OJw" kind="relationship" relationship="rootViewController" id="BOb-oV-mSE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NwS-p4-S7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="718" y="1117"/>
         </scene>

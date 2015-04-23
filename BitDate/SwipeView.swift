@@ -50,7 +50,7 @@ class SwipeView: UIView {
     }
     
     private func initialize (){
-        self.backgroundColor = UIColor.redColor()
+        //self.backgroundColor = UIColor.redColor()
         self.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "dragged:"))
         
 //        card.setTranslatesAutoresizingMaskIntoConstraints(false)

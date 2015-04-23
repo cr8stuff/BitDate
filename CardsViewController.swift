@@ -38,7 +38,7 @@ class CardsViewController: UIViewController,SwipeViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        cardStackView.backgroundColor = UIColor.clearColor()
+        cardStackView.backgroundColor = UIColor.blueColor()
         
 //        backCard = createCard(backCardTopMargin)
 //        cardStackView.addSubview(backCard!.swipView)
