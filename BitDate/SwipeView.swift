@@ -26,13 +26,17 @@ class SwipeView: UIView {
     var innerView: UIView? {
         didSet {
             if let v = innerView {
-                addSubview(v)
+                insertSubview(v, belowSubview: overlay)
                 v.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
             }
         }
     }
+    
     private var originalPoint: CGPoint?
     weak var delegate: SwipeViewDelegate?
+    
+    let overlay: UIImageView = UIImageView()
+    var direction: Direction?
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -53,10 +57,9 @@ class SwipeView: UIView {
         //self.backgroundColor = UIColor.redColor()
         self.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "dragged:"))
         
-//        card.setTranslatesAutoresizingMaskIntoConstraints(false)
-//        setConstraints()
-        
-        originalPoint = center
+        overlay.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        addSubview(overlay)
+    
     }
     
     func dragged(gestureRecognizer: UIPanGestureRecognizer){
@@ -74,6 +77,8 @@ class SwipeView: UIView {
             
             
             center = CGPointMake(originalPoint!.x + distance.x, originalPoint!.y + distance.y)
+            updateOverlay(distance.x)
+            
         case UIGestureRecognizerState.Ended:
             if abs(distance.x) < frame.width/4 {
                 restViewPositionAndTransformations()
@@ -93,6 +98,8 @@ class SwipeView: UIView {
         UIView.animateWithDuration(0.2, animations: { 
             self.center = self.originalPoint!
             self.transform = CGAffineTransformMakeRotation(0)
+            
+            self.overlay.alpha = 0
         })
         
     }
@@ -117,7 +124,18 @@ class SwipeView: UIView {
         })
     }
     
-    
+    private func updateOverlay (distance: CGFloat) {
+        var newDirection: Direction
+        newDirection = distance < 0 ? .Left : .Right
+        
+        if newDirection != direction {
+            direction = newDirection
+            overlay.image = direction == .Right ? UIImage(named: "yeah-stamp") : UIImage(named: "nah-stamp")
+        }
+        
+        overlay.alpha = abs(distance) / (superview!.frame.width/2)
+        
+    }
     
 //    private func setConstraints() {
 //        

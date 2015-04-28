@@ -112,28 +112,23 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKE-sp-ZMh">
-                                <rect key="frame" x="66" y="81" width="250" height="250"/>
+                                <rect key="frame" x="175" y="88" width="250" height="360"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="QNg-mv-5Ku"/>
-                                    <constraint firstAttribute="height" constant="250" id="uxc-RT-gbt"/>
+                                    <constraint firstAttribute="width" constant="250" id="nTy-6t-Qhl"/>
+                                    <constraint firstAttribute="height" constant="360" id="spE-vz-aMf"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oKE-sp-ZMh" firstAttribute="leading" secondItem="BiA-qP-1c4" secondAttribute="leadingMargin" constant="50" id="7k6-km-itb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="oKE-sp-ZMh" secondAttribute="trailing" constant="176" id="AZ2-Vr-jkK"/>
-                            <constraint firstItem="oKE-sp-ZMh" firstAttribute="leading" secondItem="BiA-qP-1c4" secondAttribute="leadingMargin" constant="142" id="K4s-D3-Tso"/>
-                            <constraint firstItem="oKE-sp-ZMh" firstAttribute="top" secondItem="kmm-Fu-Z4e" secondAttribute="bottom" constant="17" id="SLG-cf-NjP"/>
-                            <constraint firstItem="B2h-pJ-s8M" firstAttribute="top" secondItem="oKE-sp-ZMh" secondAttribute="bottom" constant="269" id="gDD-66-b2h"/>
-                            <constraint firstItem="oKE-sp-ZMh" firstAttribute="leading" secondItem="BiA-qP-1c4" secondAttribute="leadingMargin" constant="142" id="qaO-Uo-iX2"/>
+                            <constraint firstAttribute="centerY" secondItem="oKE-sp-ZMh" secondAttribute="centerY" constant="32" id="QI2-Xr-aZ4"/>
+                            <constraint firstAttribute="centerX" secondItem="oKE-sp-ZMh" secondAttribute="centerX" id="fsJ-24-7Dx"/>
+                            <constraint firstItem="oKE-sp-ZMh" firstAttribute="top" secondItem="kmm-Fu-Z4e" secondAttribute="bottom" constant="24" id="reC-L7-5yl"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="AZ2-Vr-jkK"/>
-                                <exclude reference="K4s-D3-Tso"/>
-                                <exclude reference="qaO-Uo-iX2"/>
+                                <exclude reference="QI2-Xr-aZ4"/>
                             </mask>
                         </variation>
                     </view>

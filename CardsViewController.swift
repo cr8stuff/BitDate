@@ -38,13 +38,8 @@ class CardsViewController: UIViewController,SwipeViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        cardStackView.backgroundColor = UIColor.blueColor()
+        //cardStackView.backgroundColor = UIColor.blueColor()
         
-//        backCard = createCard(backCardTopMargin)
-//        cardStackView.addSubview(backCard!.swipView)
-//        
-//        frontCard = createCard(frontCardTopMargin)
-//        cardStackView.addSubview(frontCard!.swipView)
 
         fetchUnviewedUsers({
             users in
@@ -94,12 +89,28 @@ class CardsViewController: UIViewController,SwipeViewDelegate {
         return nil
     }
     
+    private func switchCard () {
+        if let card = backCard {
+            frontCard = card
+            UIView.animateWithDuration(2, animations: {
+                self.frontCard!.swipView.frame = self.createCardFrame(self.frontCardTopMargin)
+            })
+        }
+        
+        if let card = self.popCard() {
+            self.backCard = card
+            self.backCard!.swipView.frame = self.createCardFrame(self.backCardTopMargin)
+            self.cardStackView.insertSubview(self.backCard!.swipView, belowSubview: self.frontCard!.swipView)
+        }
+    }
+    
     //MARK:  SwipeViewDelegate
     func swipedLeft() {
         println("left")
     
         if let frontCard = self.frontCard {
             frontCard.swipView.removeFromSuperview()
+            switchCard()
         }
     }
     
@@ -108,6 +119,7 @@ class CardsViewController: UIViewController,SwipeViewDelegate {
         
         if let frontCard = self.frontCard {
             frontCard.swipView.removeFromSuperview()
+            switchCard()
         }
     }
     
