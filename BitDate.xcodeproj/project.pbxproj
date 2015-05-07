@@ -32,6 +32,13 @@
 		7D9858741AD4007E00A0D2FE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9858731AD4007E00A0D2FE /* libz.dylib */; };
 		7D9858761AD4009100A0D2FE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9858751AD4009100A0D2FE /* libsqlite3.dylib */; };
 		7D9858791AD697B100A0D2FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9858781AD697B100A0D2FE /* LoginViewController.swift */; };
+		7DEB574B1AF8EC470046ADA3 /* MatchesTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEB574A1AF8EC470046ADA3 /* MatchesTableTableViewController.swift */; };
+		7DEB574D1AF8ECBB0046ADA3 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEB574C1AF8ECBB0046ADA3 /* UserCell.swift */; };
+		7DEB574F1AF8F0CA0046ADA3 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DEB574E1AF8F0CA0046ADA3 /* Match.swift */; };
+		7DF460A41AFB8622008EC137 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF460A31AFB8622008EC137 /* ChatViewController.swift */; };
+		7DF460A61AFB8F3E008EC137 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF460A51AFB8F3E008EC137 /* libicucore.dylib */; };
+		7DF460A81AFB8F50008EC137 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF460A71AFB8F50008EC137 /* libc++.dylib */; };
+		7DF460AA1AFB8F6A008EC137 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF460A91AFB8F6A008EC137 /* Message.swift */; };
 		A625F01D978CFB8A9A971923 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEB950D97338EF4025EC9D30 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +84,13 @@
 		7D9858751AD4009100A0D2FE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		7D9858771AD400E000A0D2FE /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		7D9858781AD697B100A0D2FE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7DEB574A1AF8EC470046ADA3 /* MatchesTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesTableTableViewController.swift; sourceTree = "<group>"; };
+		7DEB574C1AF8ECBB0046ADA3 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		7DEB574E1AF8F0CA0046ADA3 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		7DF460A31AFB8622008EC137 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		7DF460A51AFB8F3E008EC137 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		7DF460A71AFB8F50008EC137 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		7DF460A91AFB8F6A008EC137 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		EAAFCF954AA4C1A55EDE3198 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EEB950D97338EF4025EC9D30 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,6 +100,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF460A81AFB8F50008EC137 /* libc++.dylib in Frameworks */,
+				7DF460A61AFB8F3E008EC137 /* libicucore.dylib in Frameworks */,
 				7D9858761AD4009100A0D2FE /* libsqlite3.dylib in Frameworks */,
 				7D9858741AD4007E00A0D2FE /* libz.dylib in Frameworks */,
 				7D9858721AD4006A00A0D2FE /* SystemConfiguration.framework in Frameworks */,
@@ -117,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				7D32F3B81AD6A22700F5B34A /* User.swift */,
+				7DEB574E1AF8F0CA0046ADA3 /* Match.swift */,
+				7DF460A91AFB8F6A008EC137 /* Message.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -124,6 +142,8 @@
 		7D32F3BA1AD6A43D00F5B34A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7DEB574A1AF8EC470046ADA3 /* MatchesTableTableViewController.swift */,
+				7DF460A31AFB8622008EC137 /* ChatViewController.swift */,
 				7D32F3BB1AD6A4A000F5B34A /* ProfileViewController.swift */,
 				7D9858781AD697B100A0D2FE /* LoginViewController.swift */,
 				7D9858351ACB565100A0D2FE /* ViewController.swift */,
@@ -198,6 +218,7 @@
 			children = (
 				7D9858561ACD62A100A0D2FE /* SwipeView.swift */,
 				7D9858541ACB598800A0D2FE /* CardView.swift */,
+				7DEB574C1AF8ECBB0046ADA3 /* UserCell.swift */,
 			);
 			name = Views;
 			path = ..;
@@ -206,6 +227,8 @@
 		7D98585C1AD3FFD900A0D2FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DF460A71AFB8F50008EC137 /* libc++.dylib */,
+				7DF460A51AFB8F3E008EC137 /* libicucore.dylib */,
 				7D9858751AD4009100A0D2FE /* libsqlite3.dylib */,
 				7D9858731AD4007E00A0D2FE /* libz.dylib */,
 				7D9858711AD4006A00A0D2FE /* SystemConfiguration.framework */,
@@ -372,10 +395,15 @@
 				7D9858791AD697B100A0D2FE /* LoginViewController.swift in Sources */,
 				7D9858361ACB565100A0D2FE /* ViewController.swift in Sources */,
 				7D9858571ACD62A100A0D2FE /* SwipeView.swift in Sources */,
+				7DEB574B1AF8EC470046ADA3 /* MatchesTableTableViewController.swift in Sources */,
 				7D98585B1ACD659600A0D2FE /* CardsViewController.swift in Sources */,
 				7D9858551ACB598800A0D2FE /* CardView.swift in Sources */,
 				7D9858341ACB565100A0D2FE /* AppDelegate.swift in Sources */,
 				7D32F3BC1AD6A4A000F5B34A /* ProfileViewController.swift in Sources */,
+				7DEB574F1AF8F0CA0046ADA3 /* Match.swift in Sources */,
+				7DF460AA1AFB8F6A008EC137 /* Message.swift in Sources */,
+				7DEB574D1AF8ECBB0046ADA3 /* UserCell.swift in Sources */,
+				7DF460A41AFB8622008EC137 /* ChatViewController.swift in Sources */,
 				7D32F3B91AD6A22700F5B34A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
