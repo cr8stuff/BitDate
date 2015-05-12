@@ -14,6 +14,29 @@ struct Message {
     let date: NSDate
 }
 
+class MessageListener {
+    
+    var currentHandle: UInt?
+    
+    init( matchID: String, startDate: NSDate, callback: (Message) ->())
+    {
+        let handle = ref.childByAppendingPath(matchID).queryOrderedByKey().queryStartingAtValue(dateFormatter().stringFromDate(startDate)).observeEventType(FEventType.ChildAdded, withBlock: {
+            snapshot in
+            let message = snapshotToMessage(snapshot)
+            callback(message)
+        })
+        self.currentHandle = handle
+    }
+    
+    func stop() {
+        if let handle = currentHandle {
+            ref.removeObserverWithHandle(handle)
+            currentHandle = nil
+        }
+    }
+    
+}
+
 private let ref = Firebase(url: " https://bitdatedmo.firebaseio.com/messages")
 private let dateFormat = "yyyyMMddHHmmss"
 
